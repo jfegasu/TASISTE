@@ -1,0 +1,1 @@
+conda create --name pbasico Python=3.8

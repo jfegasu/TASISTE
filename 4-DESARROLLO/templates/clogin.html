@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<script>
+    function revisa(){
+        let p1=document.getElementById(pw2).Value;
+        let p2=document.getElementById(pw3).Value;
+        alert(p2);
+        return false;
+        
+    }
+</script>
+<div class="coard  mx-auto border sena-borde" style="width:70%;">
+    <div class="card-header w3-black">
+        
+        <h5 class="card-title"><font color="yellow">CAMBIAR CLAVE</font></h5>
+      </div>
+    <div class="card-body " >
+    <table>
+        <tr>
+            <td><form method="post" action="/cpw1" onsubmit="return revisa()">
+                <table class="table">
+                    <tr>
+                        <td ><label class="form-label">Anterior clave:</label></td>
+                        <td><input class="form-control " type="password" id="pw1" title="Digite la anterior clave " name="pw1" required></td>
+                    </tr>
+                    <tr>
+                        <td><label class="form-label">Digite Clave:</label></td>
+                        <td><input class="form-control" type="password"  id="pw2" name="pw2" required></td>
+                    </tr>
+                    <tr>
+                        <td><label class="form-label">Revita Clave:</label></td>
+                        <td><input class="form-control" type="password"  id="pw3" name="pw3" required></td>
+                    </tr>
+                    
+                </table>
+                <center><input class="btn btn-outline-primary" type="submit" value="Ingresar">
+                    <a href="/paso1" class="btn btn-outline-danger" ><i class="fa fa-home"></i>Regresar</a>
+            </form>
+        </td>
+            <td><img src="{{url_for('static',filename='images/RequisitosPWD.png')}}"</td>
+        </tr>
+    </table>    
+    </div>
+</div>
+<br><br>
+
+{% endblock content %}
